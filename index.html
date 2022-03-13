@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Stream Ville</title>
-	<link rel="stylesheet" href="">
+	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js" async></script>
 	<link rel="stylesheet" href="vendor/css/bootstrap.min.css">
 	<link rel="stylesheet" href="vendor/css/swiper.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>
 <!-- 	Asingene singene
@@ -22,20 +23,21 @@
 
 
 	<header>
-		<div class="navigation container">
+		<div class="navigation">
 			<div class="logo">STREAM</div>
-			<div class="menu">
-				<a href="javascript:void(0)" class="menu--item">Home</a>
-				<a href="javascript:void(0)" class="menu--item">Videos</a>
-				<a href="javascript:void(0)" class="menu--item">Live Streams</a>
-				<a href="javascript:void(0)" class="menu--item">Premiers</a>
+			<div class="menu-wrapper">	
+				<div class="menu">
+					<a href="javascript:void(0)" class="menu--item">Home</a>
+					<a href="javascript:void(0)" class="menu--item">Videos</a>
+					<a href="javascript:void(0)" class="menu--item">Live Streams</a>
+					<a href="javascript:void(0)" class="menu--item">Premiers</a>
+				</div>
 
-			</div>
-
-			<div class="subs">
-				<a href="search.html" class="search">Search</a>
-				<a href="javascript:void(0)" class="login">Login</a>
-				<a href="javascript:void(0)" class="login">Sign Up</a>
+				<div class="subs">
+					<a href="search.html" class="search">Search</a>
+					<a href="javascript:void(0)" class="login">Login</a>
+					<a href="javascript:void(0)" class="login">Sign Up</a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -95,6 +97,9 @@
 					<p>Politics</p>
 				</a>
 			</div>
+			</div>
+			<div class="call--to" data-scroll>
+				
 			</div>
 			
 			<div class="watching--now container">
@@ -157,7 +162,7 @@
 							</a>
 						</div>
 
-						<div class="swiper-container latest--swiper">
+						<div class="swiper-container latest--swiper" data-scroll>
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="slide--item">
@@ -228,8 +233,8 @@
 					</div>
 
 
-					<div class="big-add--div" data-scroll>
-						
+					<div class="big-add--div" data-scroll style="background-image: url('img/adds/1.jpg'); background-size: cover; background-repeat: no-repeat;">
+						<h2>ADS?</h2>
 					</div>
 					<div class="streams">
 						<div class="option--header">
@@ -238,7 +243,7 @@
 								<p>See all</p>
 							</a>
 						</div>
-						<div class="swiper-container streams--swiper">
+						<div class="swiper-container streams--swiper" data-scroll>
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="slide--item">
@@ -316,7 +321,7 @@
 							</a>
 						</div>
 
-						<div class="swiper-container premiers--swiper">
+						<div class="swiper-container premiers--swiper" data-scroll>
 							<div class="swiper-wrapper">
 								<div class="swiper-slide"><div class="slide--item">
 										<a href="#" class="item-content">
@@ -388,6 +393,8 @@
 			</div>	
 		</div>
 	</main>
+
+	
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -396,17 +403,18 @@
 						<p>&copy; 2022 GONGONG Live Media</p>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 col-6">
 					<div class="company">
 						<p><b>Company</b></p>
 						<a href="#">About Us</a>
 						<a href="#">Team</a>
 						<a href="#">Contact Us</a>
-						
+						<a href="#">Payments</a>
+						<a href="#">Tickets</a>
 						
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 col-6">
 					<div class="terms">
 						<p><b>Terms</b></p>
 						<a href="#">terms and conditions</a>
@@ -422,6 +430,15 @@
 						<p>Berea, Durban</p>
 						<p>4001</p>
 					</div>
+
+					<div class="banking">	
+							<p><b>Banking Details</b></p>
+							<p>	Bank: FNB</p>
+							<p>	Account Name: Gong Live Media</p>
+							<p>	Account Number: XXXXX-CCCC-CCCC-XXX</p>
+							<p>	Branch code: 77777</p>
+
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -430,11 +447,28 @@
 	<script src="vendor/js/bootstrap.min.js"></script>
 	<script src="vendor/js/swiper.min.js"></script>
 	<!-- <script src="vendor/js/isotope.pkgd.min.js"></script> -->
-	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js" async></script>
+
 
 	<script src="js/main.js"></script>
 
 	<script>
+
+		window.onload = function(){
+			try{
+				ScrollOut({
+					cssProps: {
+						viewportY: true,
+						visibleY: true
+					}
+				});
+
+				console.log("loaded scroll")
+			}catch(err){
+				console.log(err + " this is the error")
+			}
+		}
+
+
 		const heroSwiper = new Swiper('.hero--swiper',{
 			slidesPerView: 1,
 			spaceBetween: 20
@@ -447,7 +481,21 @@
 
 		const viewOptions = {
 			slidesPerView:4,
-			spaceBetween:10
+			spaceBetween:10,
+			breakpoints: {
+				320:{
+					slidesPerView:2
+				},
+				420:{
+					slidesPerView:2
+				},
+				600:{
+					slidesPerView:3,
+				},
+				756:{
+					slidesPerView:3,
+				}
+			}
 		}
 
 		const streamSwiper = new Swiper('.streams--swiper', viewOptions)
@@ -457,18 +505,8 @@
 			spaceBetween:20
 		})
 
-		try{
-			ScrollOut({
-				cssProps: {
-					viewportY: true,
-    				visibleY: true
-				}
-			});
 
-			console.log("loaded scroll")
-		}catch(err){
-			console.log(err + " this is the error")
-		}
+
 
 
 	</script>

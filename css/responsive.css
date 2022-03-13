@@ -1,0 +1,160 @@
+@media screen and (max-width: 600px){
+	*{}
+}
+
+
+@media screen and (max-width: 756px){
+	*{}
+}
+
+
+@media screen and (max-width: 420px){
+	*{}
+	.slide--item{
+		
+	height: 250px;
+	}
+	
+	.item-content .title{
+		margin-bottom: 10px;
+	}
+	.navigation{
+		
+	/*! background-color: white; */
+	/*! flex-direction: column; */
+	}
+	.menu--open	.navigation .menu-wrapper{
+		
+	}
+	.navigation .menu-wrapper{
+		
+	background-color: sandybrown;
+	position: absolute;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	width: 100vw;
+	transform: translateX(100%);
+	}
+	
+	.hero .category{
+		
+	width: 40vw;
+	}
+	
+	.current{
+		 
+	flex-direction: column;
+	overflow: hidden;
+	}
+	.current img{
+		
+	width: auto;
+	}
+	
+	.current--content{
+		
+	margin: 0;
+	}
+	
+	.address{
+		
+	margin-top: 2em;
+	}
+	
+	.copyright{
+		
+	margin: 1em auto;
+	}
+	
+	footer{
+		
+	padding: 1em 0;
+	}
+	
+	.current p{
+		line-height: 1.2;
+		margin-bottom: 5px;
+	}
+	
+	.big-add--div{
+		height: 30vh;
+		width: auto;
+		background-color: azure;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+	}
+	
+	.big-add--div h2{
+		
+	font-weight: 900;
+	font-style: italic;
+	font-size: 7em;
+	}
+	
+	.banking{
+		margin-top:2em;
+	}
+	
+	.menu .menu--item{
+		
+	margin: 0;
+	font-size: 2.8em;
+	font-weight: 900;
+	text-transform: uppercase;
+	border-bottom: 1px solid #000;
+	padding: 15px 0;
+	letter-spacing: -1.3px;
+	}
+	
+	.menu{
+		
+	padding: 1em;
+	flex-direction: column;
+	}
+	
+	.menu-wrapper .subs{
+		
+	margin: 0;
+	padding: 1em;
+	}
+	.menu-wrapper .subs a{
+		
+	font-size: 2em;
+	display: block;
+	font-weight: bold;
+	}
+	
+	.menu-wrapper .subs .login{
+		
+	}
+	
+	.menu-wrapper .subs .search{
+		
+	}
+	
+	.item-content .category{
+		
+	padding: 3px;
+	display: block;
+	width: 100%;
+	margin: 1em 0;
+	}
+	
+	.meta-wrapper{
+		
+	flex-direction: column;
+	text-align: center;
+	}
+	
+	.slide--item img{
+		
+	}
+}
+
+@media screen and (max-width: 340px){
+	*{}
+}
