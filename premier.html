@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stream | premiers</title>
+
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/css/swiper.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style>
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<div class="navigation container">
+			<div class="logo">STREAM</div>
+			<div class="menu-wrapper">	
+				<div class="menu">
+					<a href="index.html" class="menu--item">Home</a>
+					<a href="javascript:void(0)" class="menu--item">Videos</a>
+					<a href="javascript:void(0)" class="menu--item">Live Streams</a>
+					<a href="javascript:void(0)" class="menu--item">Premiers</a>
+				</div>
+
+				<div class="subs">
+					<a href="search.html" class="search">Search</a>
+					<a href="javascript:void(0)" class="login">Login</a>
+					<a href="javascript:void(0)" class="login">Sign Up</a>
+				</div>
+			</div>
+			<a href="#" class="mobile--menu" onclick="toggleMenu()">
+				<div id="nav-icon3">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="premiers--title">
+			<div class="video-wrapper">
+				<video src="media/video/premier.mp4" muted loop autoplay></video>
+			</div>
+			<div class="premier--hero container">
+				<h1>Watch a Premier</h1>
+				<p>Exclusive Local titles, music videos, documentaries premiers</p>
+			</div>
+		</div>
+		
+		<div class="grid container">
+			<div class="grid-item">
+				<img src="img/premiers/1.jpg" alt="" class="img-fluid">
+			<a class="meta--info" href="javascript:void(0)">
+				<div class="profile">
+					<img src="img/premiers/1.jpg" alt="" class="img-fluid">
+				</div>
+				<div class="premier--content">
+					<p>
+						<span class="date">9 April</span>
+						<span class="type">Fashion</span>
+					</p>
+					<p class="p--title">Imfashini yaseThekwini igujwa uMasipala</p>
+					<p>
+						<span class="rating">9.0</span>
+						<span class="location">Durban, BAT Center</span>
+					</p>
+				</div>
+			</a>
+			</div>
+			<div class="grid-item grid-item--width2" >
+				<img src="img/premiers/2.jpg" alt="" class="img-fluid">
+
+			</div>
+			<div class="grid-item">
+				<img src="img/premiers/3.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="grid-item">
+				<img src="img/premiers/4.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="grid-item">
+				<img src="img/premiers/1.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="grid-item">
+				<img src="img/premiers/3.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="grid-item grid-item--width2">
+				<img src="img/premiers/2.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="grid-item grid-item--height2">
+				<img src="img/premiers/1.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="grid-item grid-item--width2">
+				<img src="img/premiers/4.jpg" alt="" class="img-fluid">
+			</div>
+
+		</div>
+	</main>
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="copyright">
+						<p>&copy; 2022 GONGONG Live Media</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-6">
+					<div class="company">
+						<p><b>Company</b></p>
+						<a href="#">About Us</a>
+						<a href="#">Team</a>
+						<a href="#">Contact Us</a>
+						<a href="#">Payments</a>
+						<a href="#">Tickets</a>
+						
+					</div>
+				</div>
+				<div class="col-md-3 col-6">
+					<div class="terms">
+						<p><b>Terms</b></p>
+						<a href="#">terms and conditions</a>
+						<a href="#"> Privacy Policy</a>
+						<a href="#">SITEMAP</a>
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="address">
+						<p><b>Address</b></p>
+						<p>123 Botanic Gardens Road</p>
+						<p>Berea, Durban</p>
+						<p>4001</p>
+					</div>
+
+					<div class="banking">	
+							<p><b>Banking Details</b></p>
+							<p>	Bank: FNB</p>
+							<p>	Account Name: Gong Live Media</p>
+							<p>	Account Number: XXXXX-CCCC-CCCC-XXX</p>
+							<p>	Branch code: 77777</p>
+
+					</div>	
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="vendor/js/alpine.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+	<script src="vendor/js/swiper.min.js"></script>
+	<script src="vendor/js/minimasonry.min.js"></script>
+	<script src="vendor/js/scroll-out.min.js"></script>
+
+	<script>
+
+
+
+	var masonry = new MiniMasonry({
+	  container: document.querySelector('.grid'),
+	  surroundingGutter: false,
+	  gutterX: 10,
+	  gutterY: 10
+	});
+
+		function toggleMenu(){
+
+	let menuToggle = document.querySelector(".mobile--menu");
+	let menu = document.getElementById("nav-icon3");
+	let body = document.querySelector("body");
+
+		body.classList.toggle("menu-open");
+		menu.classList.toggle("open");
+	}
+
+	</script>
+</body>
+</html>
