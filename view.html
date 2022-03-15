@@ -63,6 +63,15 @@
 					<!-- <source src="media/video/1.mp4" type="video/mp4"/> -->
 				</video>
 				</div>
+				<div class="donate">
+					<div class="donation--content">
+						<a href="#" class="btn customBtn">Please Donate R10</a>
+						<p><small>Your Dontations and contributions help creators make more great content. If you cannot donate R10 now, we hope you can in the future. Thanks for your support and enjoy the show</small></p>
+					</div>
+					<div class="connection">
+						<a href="javascript:void(0)"> + Connect with the Director/Artist with our whatsapp</a>
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div class="video-meta col-md-8">
@@ -183,7 +192,7 @@
 
 
 
-	<script src="vendor/js/alpine.js"></script>
+	<!-- <script src="vendor/js/alpine.js"></script> -->
 	<script src="vendor/js/bootstrap.min.js"></script>
 	<!-- <script src="vendor/js/plyr.polyfilled.min.js"></script> -->
 	<script src="vendor/js/plyr.min.js"></script>
@@ -252,7 +261,9 @@
 		menu.classList.toggle("open");
 	}
 
-
+	if (sessionStorage.getItem("premier")){
+		body.classList.add("premier--video");
+	}
 
 	// get the video data from sessionStorage
 

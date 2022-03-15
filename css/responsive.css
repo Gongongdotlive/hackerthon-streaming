@@ -4,13 +4,7 @@
 	*{}
 	
 	.absolute-container{
-		position: absolute;
-		/*! top: 0; */
-		left: 40%;
-		right: 50%;
-		/*! bottom: 0; */
-		display: block;
-		margin: 0 auto;
+
 	}
 	.login{background-color: #fff;padding: 5px 30px;border-radius: 30px;margin-left: 1em;}
 	

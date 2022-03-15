@@ -66,7 +66,7 @@
 		<div class="grid container">
 			<div class="grid-item">
 				<img src="img/premiers/1.jpg" alt="" class="img-fluid">
-				<a class="meta--info" href="javascript:void(0)">
+				<a class="meta--info viewable" data-id="1" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -85,7 +85,7 @@
 			</div>
 			<div class="grid-item grid-item--width2" >
 				<img src="img/premiers/2.jpg" alt="" class="img-fluid">
-				<a class="meta--info" href="javascript:void(0)">
+				<a class="meta--info viewable" data-id="2" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -104,7 +104,7 @@
 			</div>
 			<div class="grid-item">
 				<img src="img/premiers/3.jpg" alt="" class="img-fluid">
-				<a class="meta--info" href="javascript:void(0)">
+				<a class="meta--info viewable" data-id="3" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -123,7 +123,7 @@
 			</div>
 			<div class="grid-item">
 				<img src="img/premiers/4.jpg" alt="" class="img-fluid">
-				<a class="meta--info" href="javascript:void(0)">
+				<a class="meta--info viewable" data-id="4" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -142,7 +142,7 @@
 			</div>
 			<div class="grid-item">
 				<img src="img/premiers/1.jpg" alt="" class="img-fluid">
-				<a class="meta--info" href="javascript:void(0)">
+				<a class="meta--info viewable" data-id="5" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -161,7 +161,7 @@
 			</div>
 			<div class="grid-item">
 				<img src="img/premiers/3.jpg" alt="" class="img-fluid">
-				<a class="meta--info" href="javascript:void(0)">
+				<a class="meta--info viewable" data-id="6" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -180,7 +180,7 @@
 			</div>
 			<div class="grid-item grid-item--width2">
 				<img src="img/premiers/2.jpg" alt="" class="img-fluid">
-				<a class="meta--info" href="javascript:void(0)">
+				<a class="meta--info viewable" data-id="7" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -199,7 +199,7 @@
 			</div>
 			<div class="grid-item grid-item--height2">
 				<img src="img/premiers/1.jpg" alt="" class="img-fluid">
-								<a class="meta--info" href="javascript:void(0)">
+								<a class="meta--info viewable" data-id="8" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -218,7 +218,7 @@
 			</div>
 			<div class="grid-item grid-item--width2">
 				<img src="img/premiers/4.jpg" alt="" class="img-fluid">
-								<a class="meta--info" href="javascript:void(0)">
+								<a class="meta--info viewable" data-id="9" href="javascript:void(0)">
 					<div class="profile">
 						<img src="img/premiers/1.jpg" alt="" class="img-fluid">
 					</div>
@@ -323,9 +323,10 @@
 	<script src="vendor/js/minimasonry.min.js"></script>
 	<script src="vendor/js/scroll-out.min.js"></script>
 	<script src="js/auth.js"></script>
+	<script src="js/premier.js"></script>
 
 	<script>
-
+	let body = document.querySelector("body");
 
 
 	var masonry = new MiniMasonry({
@@ -339,7 +340,7 @@
 
 	let menuToggle = document.querySelector(".mobile--menu");
 	let menu = document.getElementById("nav-icon3");
-	let body = document.querySelector("body");
+
 
 		body.classList.toggle("menu-open");
 		menu.classList.toggle("open");

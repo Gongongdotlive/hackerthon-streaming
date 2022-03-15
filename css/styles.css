@@ -827,3 +827,29 @@ margin-top: 5em;
   height: 30px;
   width: 30px;
 }
+
+
+.premier--video .donate{
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  justify-content: space-between;
+  visibility: visible;
+  
+}
+
+.donate{
+  visibility: hidden;
+  display: none;
+}
+
+.donate .connection{
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+
+.donate .donation--content{
+  
+}
