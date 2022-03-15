@@ -1,5 +1,7 @@
 @media screen and (min-width:900px){
 	*{}
+	.big-add--div{}
+	.big-add--div h2{}
 	
 	.video-wrapper{
 		width: 100%;
@@ -7,6 +9,13 @@
 		overflow: hidden
 	}
 	
+	.view .video-wrapper{
+		width: 100%;
+		height: 60vh;
+	}
+	.view .video-wrapper::after{
+		display: none;
+	}
 	.video-wrapper::after{
 		content: "";
 		
@@ -28,21 +37,15 @@
 	}
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
 	*{}
-}
-
-
-@media screen and (min-width: 756px) and (max-width: 890px){
-	*{}
-	
-	.mobile--menu{
-		
-	}
-	.menu-wrapper .menu{
+		.menu-wrapper .menu{
 	flex-direction: column;
 	}
-	.menu-open .menu-wrapper{transform: translateX(0);transition: transform 0.2s ease-in;}
+	.menu-open .menu-wrapper{
+		transform: translateX(0);
+		transition: transform 0.2s ease-in;
+	}
 	.menu-wrapper{
 				
 	background-color: sandybrown;
@@ -66,6 +69,16 @@
 	padding: 15px;
 	letter-spacing: -1.3px;
 	}
+}
+
+
+@media screen and (min-width: 756px) and (max-width: 890px){
+	*{}
+	
+	.mobile--menu{
+		
+	}
+
 }
 
 

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stream | Video name</title>
+
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/css/plyr.css">
+
+
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style>
+
+	</style>
+
+</head>
+<body class="view">
+	<header>
+		<div class="navigation">
+			<div class="logo">STREAM</div>
+			<div class="menu-wrapper">	
+				<div class="menu">
+					<a href="index.html" class="menu--item">Home</a>
+					<a href="javascript:void(0)" class="menu--item">Videos</a>
+					<a href="javascript:void(0)" class="menu--item">Live Streams</a>
+					<a href="javascript:void(0)" class="menu--item">Premiers</a>
+				</div>
+
+				<div class="subs">
+					<a href="search.html" class="search">Search</a>
+					<a href="javascript:void(0)" class="login">Login</a>
+					<a href="javascript:void(0)" class="login">Sign Up</a>
+				</div>
+			</div>
+			<a href="#" class="mobile--menu" onclick="toggleMenu()">
+				<div id="nav-icon3">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+	</header>
+
+	<main>
+
+		<div class="container">
+			<div class="view-video-wrapper">
+				<video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+					<source src="media/video/1.mp4" type="video/mp4"/>
+				</video>
+			</div>
+			<div class="row">
+			<div class="video-meta col-md-8">
+				<div class="video--date">
+					<p>12 March 2022</p>
+					<span>-</span>
+					<p>Documentary</p>
+				</div>
+				<div class="video--title"><h2>Jininindi Omnyama</h2></div>
+
+				<div class="video--descr">
+					<p>For YouTube and Vimeo players, Plyr uses progressive enhancement to enhance the default embeds. Below are some examples. The `plyr__video-embed` classname will make the embed responsive. You can add the `autoplay`, `loop`, `hl` (YouTube only) and `playsinline` (YouTube only) query parameters to the URL and they will be set as config options automatically. For YouTube, the `origin` should be updated to reflect the domain you're hosting the embed on, or you can opt to omit it.</p>
+				</div>
+				<div class="video--reactions"></div>
+			</div>
+
+			<!-- profile -->
+
+			<div class="video--profile col-md-4">
+				<img src="img/avatars/1.jpg" alt="" class="creator--avatar img-fluid">
+				<div class="creator--details">
+					<p class="creator--name">ROSALIA</p>
+					<p class="creator-date-joined">14 March 2020</p>
+					<a href="#" class="creator--profile">See Rosalia's channel</a>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		
+
+	</main>
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="copyright">
+						<p>&copy; 2022 GONGONG Live Media</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-6">
+					<div class="company">
+						<p><b>Company</b></p>
+						<a href="#">About Us</a>
+						<a href="#">Team</a>
+						<a href="#">Contact Us</a>
+						<a href="#">Payments</a>
+						<a href="#">Tickets</a>
+						
+					</div>
+				</div>
+				<div class="col-md-3 col-6">
+					<div class="terms">
+						<p><b>Terms</b></p>
+						<a href="#">terms and conditions</a>
+						<a href="#"> Privacy Policy</a>
+						<a href="#">SITEMAP</a>
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="address">
+						<p><b>Address</b></p>
+						<p>123 Botanic Gardens Road</p>
+						<p>Berea, Durban</p>
+						<p>4001</p>
+					</div>
+
+					<div class="banking">	
+							<p><b>Banking Details</b></p>
+							<p>	Bank: FNB</p>
+							<p>	Account Name: Gong Live Media</p>
+							<p>	Account Number: XXXXX-CCCC-CCCC-XXX</p>
+							<p>	Branch code: 77777</p>
+
+					</div>	
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="vendor/js/alpine.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+	<!-- <script src="vendor/js/plyr.polyfilled.min.js"></script> -->
+	<script src="vendor/js/plyr.min.js"></script>
+
+	<script>
+
+    const player = new Plyr('#player',{
+    	loadSprite: false,
+    	// iconUrl: 'vendor/css/ply.svg'
+    });
+
+	function toggleMenu(){
+
+	let menuToggle = document.querySelector(".mobile--menu");
+	let menu = document.getElementById("nav-icon3");
+	let body = document.querySelector("body");
+
+		body.classList.toggle("menu-open");
+		menu.classList.toggle("open");
+	}
+
+	</script>
+</body>
+</html>

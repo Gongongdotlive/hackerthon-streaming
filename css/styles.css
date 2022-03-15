@@ -69,7 +69,7 @@ p{
 
 .menu .menu--item{
   
-  margin-left: 10px;
+  margin-left: 30px;
   color: inherit;
   text-decoration: none;
 }
@@ -159,6 +159,7 @@ p{
   background-position: center;
   overflow: hidden;
   margin-top: 0;
+  border-radius: 10px;
 }
 
 .hero .category:hover,
@@ -198,6 +199,10 @@ p{
 
 .hero .category:nth-of-type(8){
   background-image: url(../img/catergories/politics.jpg);
+}
+
+.hero .category:nth-of-type(9){
+  background-image: url(../img/catergories/1.png);
 }
 
 .category p{
@@ -430,6 +435,7 @@ footer{
 /*   margin-bottom:1em; */
   padding: 3em 0;
   background-color: burlywood;
+margin-top: 5em;
 }
 
 .banking{
@@ -440,7 +446,7 @@ footer{
   min-height: 50vh;
   width: 100%;
   background-color: aquamarine;
-  transform: scale(0.9);
+  /*! transform: scale(0.9); */
   transition: transform 0.8s ease;
   display: flex;
   justify-content: center;
@@ -448,7 +454,7 @@ footer{
   text-align: center;
 }
 
-.call--to[data-scroll="in"]{
+/* .call--to[data-scroll="in"]{
   
   transform: scale(1);
 }
@@ -457,7 +463,7 @@ footer{
 .call--to[data-scroll="out"]{
   
 }
-
+ */
 
 
 * {
@@ -590,6 +596,7 @@ footer{
   padding: 2em;
   z-index: 1;
   cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
 } 
 
 
@@ -659,4 +666,113 @@ footer{
 
 .premier--hero p{
   
+}
+
+.view{
+  
+}
+
+.view .navigation{
+  
+  /*! position: relative; */
+}
+
+.view .view-video-wrapper{
+  
+  margin: 5em 0;
+}
+
+.view .video--descr{
+  
+}
+
+.video--descr p{
+  
+  font-size: 0.8em;
+  color: #525252;
+}
+
+.video--date{
+  display: flex;
+  font-size: 0.8em;
+  
+}
+
+.video--date p{
+  margin-right: 2em;
+}
+
+.video--reactions{
+  
+}
+
+.video--title{
+  
+}
+
+.video--type{
+  
+}
+
+.video-meta{
+  
+}
+
+
+.video--profile{
+  position: relative;
+  background-color: black;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video--profile p{
+  
+}
+
+.video--profile img{
+  
+}
+
+.creator--avatar{
+  width:100%;
+  height: 330px;
+  object-fit: cover;  
+  mix-blend-mode: ;
+}
+
+.creator--details{
+  position:absolute;
+  top:0;
+  height: 100%;
+  width:100%;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000069;
+  /*! border-radius: 10px; */
+}
+
+.creator--name{
+  font-weight: 900;
+  font-size: 4vw;
+  
+}
+
+.creator--profile{
+  background-color: #fff;
+  border-radius: 30px;
+  color: #000;
+  font-size: 0.8em;
+  padding: 7px;
+  margin: 20px 0;
+}
+ 
+
+.creator-date-joined{
+  font-size: 0.7em;
 }
