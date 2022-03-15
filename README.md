@@ -2,3 +2,8 @@
 
 # hackerthon-streaming
 Web app for streaming app
+
+
+## Run locally
+
+Clone repo and open the `index.html` file located in the root folder or put the folder in a webserver

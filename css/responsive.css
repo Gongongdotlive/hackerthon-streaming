@@ -43,6 +43,20 @@
 
 @media screen and (max-width: 900px){
 	*{}
+	
+	.subs{
+		display: flex;
+		margin:1em 0;
+		
+	}
+	
+	.subs a{
+		background-color: #000;
+		padding: 5px 20px;
+		margin-right:1em;
+		border-radius: 30px;
+		color: #fff;
+	}
 		.menu-wrapper .menu{
 	flex-direction: column;
 	}
