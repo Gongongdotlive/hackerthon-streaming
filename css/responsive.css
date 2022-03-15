@@ -1,5 +1,9 @@
 @media screen and (min-width:900px){
+	
+	
 	*{}
+	.login{background-color: #fff;padding: 5px 30px;border-radius: 30px;margin-left: 1em;}
+	
 	.big-add--div{}
 	.big-add--div h2{}
 	
