@@ -58,9 +58,11 @@
 
 		<div class="container">
 			<div class="view-video-wrapper">
+				<div class="absolute-container">
 				<video id="player" playsinline controls data-poster="/path/to/poster.jpg">
-					<source src="media/video/1.mp4" type="video/mp4"/>
+					<!-- <source src="media/video/1.mp4" type="video/mp4"/> -->
 				</video>
+				</div>
 			</div>
 			<div class="row">
 				<div class="video-meta col-md-8">
@@ -231,6 +233,15 @@
 
     });
 
+    player.source = {
+    	type:'video',
+    	 sources: [
+			    {
+			      src: sessionStorage.getItem("video-url"),
+			      type: 'video/mp4'
+			    }]
+    }
+
 	function toggleMenu(){
 
 	let menuToggle = document.querySelector(".mobile--menu");
@@ -240,6 +251,10 @@
 		body.classList.toggle("menu-open");
 		menu.classList.toggle("open");
 	}
+
+
+
+	// get the video data from sessionStorage
 
 	</script>
 </body>
