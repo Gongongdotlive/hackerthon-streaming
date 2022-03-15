@@ -33,6 +33,10 @@
 					<a href="javascript:void(0)" class="login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
 					<a href="javascript:void(0)" class="login">Sign Up</a>
 				</div>
+				<div class="logged-in">
+					<img src="" alt="" class="img-fluid user--avatar" width="50" height="50">
+					<p class="username"></p>
+				</div>
 			</div>
 			<a href="#" class="mobile--menu" onclick="toggleMenu()">
 				<div id="nav-icon3">
@@ -149,13 +153,13 @@
     		<form action="" id="login">
     			<div class="mb-3">
     				<label for="name" class="form-label">Your Name</label>
-    				<input type="text" class="form-control" id="name" placeholder="Sbonelo Mngadi">
+    				<input type="text" class="form-control" id="name" name="name" placeholder="Sbonelo Mngadi">
     			</div>
     			<div class="mb-3">
     				<label for="emailAddress" class="form-label">Email address</label>
-    				<input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+    				<input type="email" class="form-control" id="emailAddress" name="email" placeholder="name@example.com">
     			</div>
-    			<button class="btn customBtn">LOGIN</button>
+    			<button class="btn customBtn" type="submit">LOGIN</button>
     			<div class="help">
     				<p><small>Offline Mode</small></p>
     			</div>
@@ -179,13 +183,39 @@
 
 	<script>
 
-		function handleLogin(){
+window.addEventListener("load", function(){
+	console.log("windo loaded")
+})
+
+
+
+		let body = document.querySelector("body");
+		const loginForm = document.forms[0];
 			// get data
+			loginForm.addEventListener("submit", function(e){
+				e.preventDefault();
 
-			// save to sessionStorage for demo
+				handleLogin(this)
+				
+			})
+
+			function handleLogin(form){
+
+				let formData = new FormData(form);
+				let username = formData.get("name");
+				// save to sessionStorage for demo
+				sessionStorage.setItem('username', username);
+				body.classList.add("logged-in")
+
+				// close modal
 
 
-		}
+				// hide login and sign up btns
+
+			}
+
+
+	
 
     const player = new Plyr('#player',{
     	// loadSprite: false,
