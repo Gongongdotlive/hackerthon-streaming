@@ -23,13 +23,22 @@
 					<a href="index.html" class="menu--item">Home</a>
 					<a href="javascript:void(0)" class="menu--item">Videos</a>
 					<a href="javascript:void(0)" class="menu--item">Live Streams</a>
-					<a href="javascript:void(0)" class="menu--item">Premiers</a>
+					<a href="premier.html" class="menu--item">Premiers</a>
 				</div>
 
 				<div class="subs">
 					<a href="search.html" class="search">Search</a>
-					<a href="javascript:void(0)" class="login">Login</a>
+					<a href="javascript:void(0)" class="login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
 					<a href="javascript:void(0)" class="login">Sign Up</a>
+				</div>
+				<div class="log--in">
+					<img src="img/dololo.jpg" alt="user_avatar" class="img-fluid user--avatar" width="50" height="50">
+					<p>
+						<span>Moja</span>
+						<span class="username"></span>
+						<span>!</span>
+					</p>
+
 				</div>
 			</div>
 			<a href="#" class="mobile--menu" onclick="toggleMenu()">
@@ -234,12 +243,8 @@
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
-					<div class="copyright">
-						<p>&copy; 2022 GONGONG Live Media</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
+				
+				<div class="col-md-4 col-6">
 					<div class="company">
 						<p><b>Company</b></p>
 						<a href="#">About Us</a>
@@ -250,7 +255,7 @@
 						
 					</div>
 				</div>
-				<div class="col-md-3 col-6">
+				<div class="col-md-4 col-6">
 					<div class="terms">
 						<p><b>Terms</b></p>
 						<a href="#">terms and conditions</a>
@@ -259,7 +264,7 @@
 						<a href="#"></a>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="address">
 						<p><b>Address</b></p>
 						<p>123 Botanic Gardens Road</p>
@@ -276,14 +281,48 @@
 
 					</div>	
 				</div>
+
+				<div class="row">
+					<div class="col-12">
+					<div class="copyright">
+						<p>&copy; 2022 GONGONG Live Media</p>
+					</div>
+				</div>
+				</div>
 			</div>
 		</div>
 	</footer>
+
+		<div class="modal fade" tabindex="-1" id="loginModal">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		    	<div class="login--form">
+		    		<h2>Log In</h2>
+		    		<form action="" id="login">
+		    			<div class="mb-3">
+		    				<label for="name" class="form-label">Your Name</label>
+		    				<input type="text" class="form-control" id="name" name="name" placeholder="Sbonelo Mngadi">
+		    			</div>
+		    			<div class="mb-3">
+		    				<label for="emailAddress" class="form-label">Email address</label>
+		    				<input type="email" class="form-control" id="emailAddress" name="email" placeholder="name@example.com">
+		    			</div>
+		    			<button class="btn customBtn" type="submit">LOGIN</button>
+		    			<div class="help">
+		    				<p><small>Offline Mode</small></p>
+		    			</div>
+		    		</form>
+
+		    	</div>
+		    </div>
+		  </div>
+		</div>
 	<script src="vendor/js/alpine.js"></script>
 	<script src="vendor/js/bootstrap.min.js"></script>
 	<script src="vendor/js/swiper.min.js"></script>
 	<script src="vendor/js/minimasonry.min.js"></script>
 	<script src="vendor/js/scroll-out.min.js"></script>
+	<script src="js/auth.js"></script>
 
 	<script>
 

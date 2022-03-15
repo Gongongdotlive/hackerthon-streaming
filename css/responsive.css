@@ -43,6 +43,27 @@
 
 @media screen and (max-width: 900px){
 	*{}
+	main{
+		visibility: visible;
+		opacity: 1;
+	}
+	.menu-open.logged-in main{
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity;
+		transition-delay: 1s;
+	
+	}
+	.logged-in .log--in{
+	  border:1px solid	#000;
+		min-width: 250px;
+		max-width: 350px;
+		padding: 1em;
+		padding-left:0;
+		background-color: #fff;
+		margin: 1em;
+		border-radius: 30px;
+	}
 	
 	.subs{
 		display: flex;

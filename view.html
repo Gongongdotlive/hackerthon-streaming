@@ -33,9 +33,14 @@
 					<a href="javascript:void(0)" class="login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
 					<a href="javascript:void(0)" class="login">Sign Up</a>
 				</div>
-				<div class="logged-in">
-					<img src="" alt="" class="img-fluid user--avatar" width="50" height="50">
-					<p class="username"></p>
+				<div class="log--in">
+					<img src="img/dololo.jpg" alt="user_avatar" class="img-fluid user--avatar" width="50" height="50">
+					<p>
+						<span>Moja</span>
+						<span class="username"></span>
+						<span>!</span>
+					</p>
+
 				</div>
 			</div>
 			<a href="#" class="mobile--menu" onclick="toggleMenu()">
@@ -180,23 +185,19 @@
 	<script src="vendor/js/bootstrap.min.js"></script>
 	<!-- <script src="vendor/js/plyr.polyfilled.min.js"></script> -->
 	<script src="vendor/js/plyr.min.js"></script>
+	<script src="js/auth.js"></script>
 
 	<script>
 
-window.addEventListener("load", function(){
-	console.log("windo loaded")
-})
-
-
-
 		let body = document.querySelector("body");
 		const loginForm = document.forms[0];
-			// get data
-			loginForm.addEventListener("submit", function(e){
-				e.preventDefault();
+		const loginModal = document.getElementById("loginModal")
+		const usernameEl = document.querySelector(".username");
 
+
+		loginForm.addEventListener("submit", function(e){
+				e.preventDefault();
 				handleLogin(this)
-				
 			})
 
 			function handleLogin(form){
@@ -208,18 +209,26 @@ window.addEventListener("load", function(){
 				body.classList.add("logged-in")
 
 				// close modal
-
+				// loginModal.hide()
 
 				// hide login and sign up btns
-
+				usernameEl.innerText = username;
 			}
 
+			// loginModal.addEventListener("hidden.bs.modal", function(){
+			// 	loginForm.reset();
+			// })
+			if (sessionStorage.getItem('username')){
+				usernameEl.innerText = sessionStorage.getItem('username');
+				body.classList.add("logged-in")
+			}else{
+				console.log("logged out")
+			}
 
 	
 
     const player = new Plyr('#player',{
-    	// loadSprite: false,
-    	// iconUrl: 'vendor/css/ply.svg'
+
     });
 
 	function toggleMenu(){

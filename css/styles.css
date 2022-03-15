@@ -16,6 +16,8 @@ p{
 }
 
 
+.logged-in .subs{display: none;}
+
 /*[data-scroll] {
   transition: all 1s cubic-bezier(.17,.84,.44,1);
 }
@@ -47,6 +49,11 @@ p{
   border-bottom: 1px solid #c2c2c2;
 }
 
+.view .navigation{
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(26px) saturate(120%);
+  border-bottom: 1px solid #c2c2c2;
+}
 
 .logo{
   
@@ -410,7 +417,7 @@ p{
 }
 
 .premiers{
-  margin:4em 0;
+  /*! margin:4em 0; */
 }
 
 .streams{
@@ -793,4 +800,26 @@ margin-top: 5em;
 
 .creator-date-joined{
   font-size: 0.7em;
+}
+
+.log--in{
+  display: none;
+}
+
+.logged-in .log--in{
+  display: flex;
+  margin-left:3em;
+  align-items: center;
+}
+
+
+.logged-in .log--in .username{
+  font-weight: bold;
+}
+
+.logged-in .log--in .user--avatar{
+  margin:0 10px;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
 }
