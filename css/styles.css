@@ -1,10 +1,26 @@
 :root {
-  --plyr-color-main: orangered;
+  --plyr-color-main: #ea5c0a;
+  --main-color-main: #ea5c0a;
 }
 
 * {}
 
 body{background-color: beige;}
+
+.loader--content{
+  text-align: center;
+}
+
+.loader--content h1{
+  font-size: 15vw;
+  font-weight:900;
+  font-style:italic;
+  
+}
+
+.loader--content p{
+  
+}
 .logo{
   width: 60px;
 }
@@ -48,6 +64,9 @@ p{
   right: 0;
   align-items: center;
   min-height: 50px;
+  background-color: #ffffff78;
+  backdrop-filter: blur(15px) saturate(120%);
+  border-bottom: 1px solid #ffffff2e;
 }
 
 [data-scroll-dir-y="1"] .navigation,
@@ -251,8 +270,13 @@ p{
   font-weight: 900;
   font-style: italic;
   white-space: normal;
-  color: orangered;
+  color: var(--main-color-main);
   text-transform: uppercase;
+}
+
+.category:hover > p,
+.category:active > p{
+  color: chartreuse;
 }
 
 .customBtn{
@@ -272,6 +296,7 @@ p{
 .call-to-content{
   
   padding: 1em;
+  color: #000;
 }
 
 .avatar{
@@ -439,7 +464,7 @@ p{
 }
 
 .status.live{
-  background-color: red;
+  background-color: var(--main-color-main);
 }
 
 .premiers{
@@ -496,7 +521,7 @@ margin-top: 5em;
 .call--to{
   min-height: 50vh;
   width: 100%;
-  background-color: orangered;
+  background-color: var(--main-color-main);
   /*! transform: scale(0.9); */
   transition: transform 0.8s ease;
   display: flex;

@@ -9,8 +9,32 @@
 	<link rel="stylesheet" href="vendor/css/swiper.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style>
+		body.loading{
+			overflow: hidden;
+		}
+
+
+		.loading .loader{
+			transform: translateX(0%);
+			transition: transform 0.3s ease;
+		}
+		.loader{
+			position: fixed;
+			background-color: black;
+			color: #fff;
+			width: 100vw;
+			height: 100vh;
+			z-index: 100;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: translateX(-100%);
+			transition: transform 0.3s ease;
+		}
+	</style>
 </head>
-<body>
+<body class="loading">
 <!-- 	Asingene singene
 		Sashebaleni, ebaleni wenzinsizwa
 		KwaNongoma
@@ -20,12 +44,17 @@
 		singene KwaNongoma
 		Sazesangena ngobhevula
 	 -->
-
+<div class="loader">
+	<div class="loader--content">
+			<h1>GONGONG</h1>
+			<p>Loading...</p>
+	</div>
+</div>
 
 	<header>
 		<div class="navigation">
 			<div class="logo">
-				<img src="https://gongong.live/word/wp-content/uploads/2022/03/project_20200802_145127.png" alt="gongong logo" class="img-fluid">
+				<img src="https://gongong.live/word/wp-content/uploads/2021/12/cropped-project_20200802_145127.png" alt="gongong logo" class="img-fluid">
 			</div>
 			<div class="menu-wrapper">	
 				<div class="menu">
