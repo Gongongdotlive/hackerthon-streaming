@@ -6,13 +6,18 @@
 		videoItem.addEventListener("click", function(e){
 			e.preventDefault();
 
-			// store the id in the sessionStorage
-			console.log(vidId)
-			videoUrl = `media/video/${vidId}.mp4`
-
-			sessionStorage.setItem("video-id", vidId);
+			if(videoItem.dataset.provider){
+				videoUrl = videoItem.dataset.url
+				videoProvider = videoItem.dataset.provider;
+				sessionStorage.setItem("video_provider", videoProvider);
+			}else if(vidId){
+				videoUrl = `media/video/${vidId}.mp4`
+				sessionStorage.setItem("video-id", vidId);
+			}else{
+				videoUrl = videoItem.dataset.url
+			}
 			sessionStorage.setItem("video-url", videoUrl);
-			sessionStorage.setItem("premier", "true")
+			sessionStorage.setItem("preview","true")
 
 			window.location = "view.html"
 		})
