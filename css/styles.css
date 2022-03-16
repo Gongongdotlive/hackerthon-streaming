@@ -249,6 +249,11 @@ p{
   min-width: 200px;
 }
 
+.customBtn:hover,
+.customBtn:active{
+  color: aquamarine;
+}
+
 .call-to-content{
   
   padding: 1em;
@@ -854,5 +859,24 @@ margin-top: 5em;
 
 
 .donate .donation--content{
+  
+}
+
+
+.paymentModal{
+  padding: 1.5em;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.paymentModal .buttons{
+  
+}
+
+.paymentModal h1{
+  
+}
+
+.paymentModal h3{
   
 }
