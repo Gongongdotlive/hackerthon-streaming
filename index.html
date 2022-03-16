@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="vendor/css/swiper.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style>
+		[x-cloak]{
+			display: none !important;
+		}
+	</style>
 </head>
 <body>
 <!-- 	Asingene singene
@@ -180,7 +185,15 @@
 					</div>
 				</div>
 			</div>
+
+	
+
 			<div class="container">	
+				<div x-data="{ statuses: ['open', 'closed', 'archived'] }">
+					<template x-for="status in statuses">
+						<div x-text="status"></div>
+					</template>
+				</div>
 					<div class="latest">
 						<div class="option--header">
 							<h4>Latest for You</h3>
@@ -188,76 +201,48 @@
 								<!-- <p>See all</p> -->
 							</a>
 						</div>
+						<div 
+						x-cloak
+						x-data="{data : [], isLoading: true}" 
+						x-init="fetch('https://gongong.live/word/wp-json/wp/v2/video')
+						.then(response => response.json())
+						.then(response =>{
+							data = response;
+							console.log(data)
+							isLoading = false;
+						})
+						.catch(error => error.message)
 
-						<div class="swiper-container latest--swiper" >
+						$watch('isLoading', value=> {
+							console.log(value)
+							console.log(data)
+							swiperUpdate()
+						});">
+						<div class="swiper-container latest--swiper">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="slide--item">
-										<a href="view.html" class="item-content viewable" data-id="1">
-											<p class="avatar">By Streamer</p>
-											<span class="metadata">
-												<h3 class="title">Jininindi Omnyama</h3>
-												<p class="meta-wrapper">
-													<span class="episode">5 Episodes</span>
-													<span class="category">Documentary</span>
-												</p>
-											</span>
-										</a>
-								
-										<img src="img/latest/1.jpg" alt="" class="img-fluid">
+								<template x-for="video in data">
+									<div class="swiper-slide">
+										<div class="slide--item">
+											<a href="view.html" class="item-content viewable" x-bind:data-id="video.id" x-bind:data-url="video.acf.video_url">
+												<p class="avatar" x-text="video.acf.content_owner.data.display_name">By Streamer</p>
+												<span class="metadata">
+													<h3 class="title" x-text="video.title.rendered"></h3>
+													<p class="meta-wrapper">
+
+														<span>Episode <span class="episode" x-text="video.acf.episode"></span></span>
+														<span class="category" x-text="video.acf.category[0].name"></span>
+													</p>
+												</span>
+											</a>
+											<img :src="video.acf.thumbnail" x-bind:alt="" class="img-fluid">
+										</div>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="slide--item">
-										<a href="view.html" class="item-content viewable" data-id="2">
-											<p class="avatar">By Streamer</p>
-											<span class="metadata">
-												<h3 class="title">New African Strings</h3>
-												<p class="meta-wrapper">
-													<span class="episode">5 Episodes</span>
-													<span class="category">Documentary</span>
-												</p>
-											</span>
-										</a>
-								
-										<img src="img/latest/2.jpg" alt="" class="img-fluid">
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="slide--item">
-										<a href="view.html" class="item-content viewable" data-id="3">
-											<p class="avatar">By Streamer</p>
-											<span class="metadata">
-												<h3 class="title">uMseni kaMusi noNdlovu kaThimuni</h3>
-												<p class="meta-wrapper">
-													<span class="episode">5 Episodes</span>
-													<span class="category">Documentary</span>
-												</p>
-											</span>
-										</a>
-								
-										<img src="img/latest/3.jpg" alt="" class="img-fluid">
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="slide--item">
-										<a href="view.html" class="item-content viewable" data-id="4">
-											<p class="avatar">By Streamer</p>
-											<span class="metadata">
-												<h3 class="title">uMnt Zibhebhu kaMaphitha</h3>
-												<p class="meta-wrapper">
-													<span class="episode">5 Episodes</span>
-													<span class="category">Documentary</span>
-												</p>
-											</span>
-										</a>
-								
-										<img src="img/latest/4.jpg" alt="" class="img-fluid">
-									</div>
-								</div>
+								</template>
 							</div>
 						</div>
 					</div>
+				</div>
+
 
 
 					<div class="big-add--div"  style="background-image: url('img/adds/1.jpg'); background-size: cover; background-repeat: no-repeat;">
@@ -502,10 +487,10 @@
 	</div>
 
 
-	<script src="vendor/js/alpine.js"></script>
+	<!-- <script src="vendor/js/alpine.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="vendor/js/bootstrap.min.js"></script>
 	<script src="vendor/js/swiper.min.js"></script>
-	<!-- <script src="vendor/js/isotope.pkgd.min.js"></script> -->
 	<script src="vendor/js/scroll-out.min.js"></script>
 
 
@@ -553,7 +538,16 @@
 		})
 
 
+		function swiperUpdate(){
+			latestSwiper.update();
+			premierSwiper.update();
+			streamSwiper.update();
+			console.log("swiper updated")
+		}
 
+		function fetchData(){
+
+		}
 
 
 	</script>

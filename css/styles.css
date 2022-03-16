@@ -353,6 +353,9 @@ p{
   
 }
 
+.avatar{
+  font-size: 0.7em;
+}
 .item-content{
   
   padding: 1em;
@@ -812,7 +815,7 @@ margin-top: 5em;
 
 .logged-in .log--in{
   display: flex;
-  margin-left:3em;
+  margin-left:1em;
   align-items: center;
 }
 
