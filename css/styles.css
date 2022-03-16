@@ -254,6 +254,11 @@ p{
   padding: 1em;
 }
 
+.avatar{
+     font-size: 0.7em;
+}
+
+
 .custom--slide{
   
   height: 75vh;

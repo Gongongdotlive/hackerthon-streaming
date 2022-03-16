@@ -8,7 +8,14 @@
 
 			// store the id in the sessionStorage
 			console.log(vidId)
-			videoUrl = `media/video/${vidId}.mp4`
+			if(videoItem.dataset.url){
+				videoUrl = videoItem.dataset.url
+				videoProvider = videoItem.dataset.provider;
+				sessionStorage.setItem("video_provider", videoProvider);
+			}else{
+				videoUrl = `media/video/${vidId}.mp4`
+			}
+			
 
 			sessionStorage.setItem("video-id", vidId);
 			sessionStorage.setItem("video-url", videoUrl);

@@ -239,17 +239,33 @@
 	
 
     const player = new Plyr('#player',{
+    							ratio:'16:9'
+    						});
 
-    });
 
-    player.source = {
-    	type:'video',
-    	 sources: [
-			    {
-			      src: sessionStorage.getItem("video-url"),
-			      type: 'video/mp4'
-			    }]
+    if(sessionStorage.getItem('video_provider') === 'yt'){
+    	player.source = {
+    		type:'video',
+    		sources: [
+    		{
+    			src: sessionStorage.getItem("video-url"),
+    			type: 'video/mp4',
+    			provider: 'youtube'
+    		}]
+    	}
+
+    }else{
+
+    	player.source = {
+    		type:'video',
+    		sources: [
+    		{
+    			src: sessionStorage.getItem("video-url"),
+    			type: 'video/mp4'
+    		}]
+    	}
     }
+
 
 	function toggleMenu(){
 
