@@ -203,7 +203,7 @@
 						</div>
 						<div 
 						x-cloak
-						x-data="{data : [], isLoading: true}" 
+						x-data="{data:[], isLoading: true}" 
 						x-init="fetch('https://gongong.live/word/wp-json/wp/v2/video')
 						.then(response => response.json())
 						.then(response =>{
@@ -223,12 +223,13 @@
 								<template x-for="video in data">
 									<div class="swiper-slide">
 										<div class="slide--item">
-											<a href="view.html" class="item-content viewable" x-bind:data-id="video.id" x-bind:data-url="video.acf.video_url">
+											<a href="view.html" class="item-content viewable" :data-id="video.id" :data-url="video.acf.video_url">
 												<p class="avatar" x-text="video.acf.content_owner.data.display_name">By Streamer</p>
 												<span class="metadata">
 													<h3 class="title" x-text="video.title.rendered"></h3>
 													<p class="meta-wrapper">
-
+													
+														<span class="status live" x-text="video.acf.stream"></span>
 														<span>Episode <span class="episode" x-text="video.acf.episode"></span></span>
 														<span class="category" x-text="video.acf.category[0].name"></span>
 													</p>

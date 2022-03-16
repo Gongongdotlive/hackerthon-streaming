@@ -30,6 +30,9 @@
 			}catch(err){
 				console.log(err + " this is the error")
 			}
+
+
+			
 		}
 
 

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Gongongdotlive/hackerthon-streaming/issues"
   },
-  "homepage": "https://github.com/Gongongdotlive/hackerthon-streaming#readme"
+  "homepage": "https://github.com/Gongongdotlive/hackerthon-streaming#readme",
+  "dependencies": {
+    "cloudinary-core": "^2.12.3"
+  }
 }
