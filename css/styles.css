@@ -38,7 +38,7 @@ p{
 }
 
 
-.logged-in .subs{display: none;}
+.logged-in .subs{display: none;visibility: hidden;}
 
 /*[data-scroll] {
   transition: all 1s cubic-bezier(.17,.84,.44,1);
@@ -101,10 +101,11 @@ p{
   /*! flex-direction: column; */
 }
 
-.menu-wrapper .subs{
+.subs{
   margin-left: 1em;
   display: flex;
   align-items: center;
+  visibility: visible;
 }
 
 .menu .menu--item{
