@@ -913,5 +913,5 @@ margin-top: 5em;
   
 }
 
-.join--up .whatsapp--number{}
+.join--up .whatsapp--number{font-weight: bold;text-align: center;}
 .join--up label{}

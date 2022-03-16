@@ -153,6 +153,8 @@
 	.menu-open .navigation .menu-wrapper{
 		transform: translateX(0);
 		transition: transform 0.2s ease-in;
+		backdrop-filter: blur(12px) saturate(120%);
+		background-color: #f4a460cf;
 	}
 	.navigation .menu-wrapper{
 		
@@ -176,10 +178,13 @@
 		 
 	flex-direction: column;
 	overflow: hidden;
+		border-radius: 0;
+		
+	background: transparent;
 	}
 	.current img{
 		
-	width: auto;
+	width: 80px;
 	}
 	
 	.current--content{
