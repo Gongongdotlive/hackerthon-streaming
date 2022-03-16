@@ -545,11 +545,6 @@ margin-top: 5em;
  */
 
 
-* {
-  margin: 0;
-  padding: 0; 
-}
-
 /* Icon 1 */
 
 #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
@@ -907,3 +902,14 @@ margin-top: 5em;
 .donate .donation--content{
   
 }
+
+.join--up{
+  padding: 2em
+}
+
+.join--up h3{
+  
+}
+
+.join--up .whatsapp--number{}
+.join--up label{}
