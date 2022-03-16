@@ -102,8 +102,9 @@ p{
 }
 
 .menu-wrapper .subs{
-  
   margin-left: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .menu .menu--item{
