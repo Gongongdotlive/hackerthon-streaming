@@ -1,5 +1,5 @@
-:root{
-  --scale: --visible-y/2;
+:root {
+  --plyr-color-main: orangered;
 }
 
 * {}
@@ -11,6 +11,10 @@ body{background-color: beige;}
 a{
   color: inherit;
   text-decoration: none;
+}
+
+a:hover{
+  color: orangered;
 }
 
 p{
@@ -88,8 +92,14 @@ p{
   margin-left: 30px;
   color: inherit;
   text-decoration: none;
+  padding: 5px;
 }
 
+.menu--item:hover,
+.menu--item:active{
+  background-color: #fff;
+  border-radius: 10px;
+}
 
 
 /* login */
@@ -241,7 +251,7 @@ p{
   font-weight: 900;
   font-style: italic;
   white-space: normal;
-  color: chartreuse;
+  color: orangered;
   text-transform: uppercase;
 }
 
@@ -252,6 +262,11 @@ p{
   color: #fff;
   margin: 1em 0;
   min-width: 200px;
+}
+
+.customBtn:hover,
+.customBtn:active{
+  color: orangered;
 }
 
 .call-to-content{
@@ -320,7 +335,7 @@ p{
 .current{
   
   display: flex;
-  background-color: azure;
+  background-color: white;
   border-radius: 10px;
 }
 
@@ -375,6 +390,7 @@ p{
   width: 100%;
   background-color: #00000061;
   /*! backdrop-filter: blur(1px); */
+  min-height: 300px;
 }
 
 .item-content:hover,
@@ -480,7 +496,7 @@ margin-top: 5em;
 .call--to{
   min-height: 50vh;
   width: 100%;
-  background-color: aquamarine;
+  background-color: orangered;
   /*! transform: scale(0.9); */
   transition: transform 0.8s ease;
   display: flex;
