@@ -100,8 +100,11 @@
 				<div class="video-meta col-md-8">
 					<div class="video--date">
 						<p>12 March 2022</p>
+
 					</div>
-					<div class="video--title"><h2></h2></div>
+					<div class="video--title">
+						<h2></h2>
+					</div>
 
 					<div class="video--descr">
 						<p></p>
@@ -116,7 +119,7 @@
 					<div class="creator--details">
 						<p class="creator--name">gong admin</p>
 						<p class="creator-date-joined">14 March 2020</p>
-						<a href="#" class="creator--profile">See Gongong's channel</a>
+						<a href="#" class="creator--profile">See my channel</a>
 					</div>
 				</div>
 			</div>
@@ -226,6 +229,11 @@
 		const loginForm = document.forms[0];
 		const loginModal = document.getElementById("loginModal")
 		const usernameEl = document.querySelector(".username");
+		const uploaderEl = document.querySelector(".creator--name")
+
+		uploaderEl.innerText = sessionStorage.getItem("uploader")
+		const uploaderName = uploaderEl.innerText;
+
 
 
 		loginForm.addEventListener("submit", function(e){

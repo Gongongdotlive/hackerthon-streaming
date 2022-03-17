@@ -2,7 +2,11 @@
 	
 	
 	*{}
-	
+	.buttons{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
 	.absolute-container{
 
 	}
@@ -126,7 +130,29 @@
 
 
 @media screen and (max-width: 420px){
-	*{}
+	
+	
+*{}
+	
+	.call--to{
+		height: auto;
+		min-height: auto;
+	}	
+	.item-content .metadata{
+		
+	/*! height: 100px; */
+	/*! overflow: hidden; */
+	}
+	form{
+	}
+	.buttons{
+		position: absolute;
+		
+	}
+	
+	.buttons a{
+		
+	}
 	
 	.custom--slide{
 		
@@ -139,6 +165,9 @@
 	
 	.item-content .title{
 		margin-bottom: 10px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 1em;
 	}
 	.navigation{
 		
@@ -174,32 +203,35 @@
 	width: 40vw;
 	}
 	
-	.current{
-		 
-	flex-direction: column;
-	overflow: hidden;
+	.current{ 
+		flex-direction: column;
+		overflow: hidden;
 		border-radius: 0;
-		
-	background: transparent;
+		background: transparent;
+		text-align: center;
+		align-items: center;
+		padding: 10px;
 	}
 	.current img{
-		
-	width: 80px;
+		width: 80px;
+	}
+	
+	.current img::after{
+		content: '';
 	}
 	
 	.current--content{
-		
-	margin: 0;
+	  margin: 0;
 	}
 	
 	.address{
 		
-	margin-top: 2em;
+	 margin-top: 2em;
 	}
 	
 	.copyright{
 		
-	margin: 1em auto;
+	 margin: 1em auto;
 	}
 	
 	footer{
@@ -242,6 +274,14 @@
 	border-bottom: 1px solid #000;
 	padding: 15px 0;
 	letter-spacing: -1.3px;
+	}
+	
+	.menu .menu--item:hover,
+	.menu .menu--item:active{
+			
+	background-color: transparent;
+	border-radius: 0;
+	color: var(--main-color-main);
 	}
 	
 	.menu{

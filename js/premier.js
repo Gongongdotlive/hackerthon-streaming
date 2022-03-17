@@ -17,7 +17,7 @@
 				videoUrl = videoItem.dataset.url
 			}
 			sessionStorage.setItem("video-url", videoUrl);
-			sessionStorage.setItem("preview","true")
+			sessionStorage.setItem("premier","true")
 
 			window.location = "view.html"
 		})
