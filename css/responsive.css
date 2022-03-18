@@ -133,18 +133,33 @@
 	
 	
 *{}
+	.status.live{
+		
+	}
+	
+	.hero--content{
+		max-width: auto;
+		width:300px;
+	}
 	
 	.call--to{
 		height: auto;
 		min-height: auto;
 	}	
+	
+	.item-content{
+		
+	}
+	
 	.item-content .metadata{
 		
-	/*! height: 100px; */
-	/*! overflow: hidden; */
 	}
+	
 	form{
+		
 	}
+	
+	
 	.buttons{
 		position: absolute;
 		
@@ -266,34 +281,31 @@
 	}
 	
 	.menu .menu--item{
-		
-	margin: 0;
-	font-size: 2.8em;
-	font-weight: 900;
-	text-transform: uppercase;
-	border-bottom: 1px solid #000;
-	padding: 15px 0;
-	letter-spacing: -1.3px;
+		margin: 0;
+		font-size: 2.8em;
+		font-weight: 900;
+		text-transform: uppercase;
+		border-bottom: 1px solid #000;
+		padding: 15px 0;
+		letter-spacing: -1.3px;
 	}
 	
 	.menu .menu--item:hover,
 	.menu .menu--item:active{
-			
-	background-color: transparent;
-	border-radius: 0;
-	color: var(--main-color-main);
+		background-color: transparent;
+		border-radius: 0;
+		color: var(--main-color-main);
 	}
 	
 	.menu{
-		
-	padding: 1em;
-	flex-direction: column;
+		padding: 1em;
+		flex-direction: column;
 	}
 	
 	.menu-wrapper .subs{
 		
-	margin: 0;
-	padding: 1em;
+		margin: 0;
+		padding: 1em;
 	}
 	.menu-wrapper .subs a{
 		
@@ -320,8 +332,9 @@
 	
 	.meta-wrapper{
 		
-	flex-direction: column;
+	flex-direction: row;
 	text-align: center;
+	align-items: center;
 	}
 	
 	.slide--item img{

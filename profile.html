@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stream | premiers</title>
+
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/css/swiper.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style>
+		body.loading{
+			overflow: hidden;
+		}
+
+
+		.loading .loader{
+			transform: translateX(0%);
+			transition: transform 0.3s ease;
+		}
+		.loader{
+			position: fixed;
+			background-color: black;
+			color: #fff;
+			width: 100vw;
+			height: 100vh;
+			z-index: 100;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: translateX(-100%);
+			transition: transform 0.3s ease;
+		}
+	</style>
+
+</head>
+<body class="loading">
+	<header>
+		<div class="navigation">
+			<div class="logo">
+				<img src="https://gongong.live/word/wp-content/uploads/2021/12/cropped-project_20200802_145127.png" alt="gongong logo" class="img-fluid">
+			</div>
+			<div class="menu-wrapper">	
+				<div class="menu">
+					<a href="index.html" class="menu--item">Home</a>
+					<a href="javascript:void(0)" class="menu--item">Videos</a>
+					<a href="javascript:void(0)" class="menu--item">Live Streams</a>
+					<a href="javascript:void(0)" class="menu--item">Premiers</a>
+				</div>
+
+				<div class="subs">
+					<a href="search.html" class="search">Search</a>
+					<a href="javascript:void(0)" class="login">Login</a>
+					<a href="javascript:void(0)" class="login">Sign Up</a>
+				</div>
+			</div>
+			<a href="#" class="mobile--menu" onclick="toggleMenu()">
+				<div id="nav-icon3">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="premiers--title">
+			<div class="video-wrapper">
+				<video src="media/video/premier.mp4" muted loop autoplay></video>
+			</div>
+			<div class="premier--hero container">
+				<h1>Watch a Premier</h1>
+				<p>Exclusive Local Titles, Music Videos, Live Performace, documentaries premiers</p>
+			</div>
+		</div>
+		
+
+	</main>
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-4 col-6">
+					<div class="company">
+						<p><b>Company</b></p>
+						<a href="#">About Us</a>
+						<a href="#">Team</a>
+						<a href="#">Contact Us</a>
+						<a href="#">Payments</a>
+						<a href="#">Tickets</a>
+						
+					</div>
+				</div>
+				<div class="col-md-4 col-6">
+					<div class="terms">
+						<p><b>Terms</b></p>
+						<a href="#">terms and conditions</a>
+						<a href="#"> Privacy Policy</a>
+						<a href="#">SITEMAP</a>
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="address">
+						<p><b>Address</b></p>
+						<p>123 Botanic Gardens Road</p>
+						<p>Berea, Durban</p>
+						<p>4001</p>
+					</div>
+
+					<div class="banking">	
+							<p><b>Banking Details</b></p>
+							<p>	Bank: FNB</p>
+							<p>	Account Name: Gong Live Media</p>
+							<p>	Account Number: XXXXX-CCCC-CCCC-XXX</p>
+							<p>	Branch code: 77777</p>
+
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+					<div class="copyright">
+						<p>&copy; 2022 GONGONG Live Media</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal fade" tabindex="-1" id="loginModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    	<div class="login--form">
+    		<h2>Log In</h2>
+    		<form action="" id="login">
+    			<div class="mb-3">
+    				<label for="name" class="form-label">Your Name</label>
+    				<input type="text" class="form-control" id="name" name="name" placeholder="Sbonelo Mngadi" required>
+    			</div>
+    			<div class="mb-3">
+    				<label for="emailAddress" class="form-label">Email address</label>
+    				<input type="email" class="form-control" id="emailAddress" name="email" placeholder="name@example.com">
+    			</div>
+    			<button class="btn customBtn" type="submit">LOGIN</button>
+    			<div class="help">
+    				<p><small>Offline Mode</small></p>
+    			</div>
+    		</form>
+
+    	</div>
+    </div>
+  </div>
+</div>
+	
+	<script src="vendor/js/alpine.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+	<script src="vendor/js/swiper.min.js"></script>
+	<script src="vendor/js/minimasonry.min.js"></script>
+	<script src="vendor/js/scroll-out.min.js"></script>
+	<script src="js/global.js"></script>
+	<script>
+
+
+
+	var masonry = new MiniMasonry({
+	  container: document.querySelector('.grid'),
+	  surroundingGutter: false,
+	  gutterX: 10,
+	  gutterY: 10
+	});
+
+		function toggleMenu(){
+
+	let menuToggle = document.querySelector(".mobile--menu");
+	let menu = document.getElementById("nav-icon3");
+	let body = document.querySelector("body");
+
+		body.classList.toggle("menu-open");
+		menu.classList.toggle("open");
+	}
+
+	</script>
+</body>
+</html>
