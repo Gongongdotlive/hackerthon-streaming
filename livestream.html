@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Gongong Streaming</title>
+	<!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js" async></script> -->
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/css/swiper.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style>
+		body.loading{
+			overflow: hidden;
+		}
+
+
+		.loading .loader{
+			transform: translateX(0%);
+			transition: transform 0.3s ease;
+		}
+		.loader{
+			position: fixed;
+			background-color: black;
+			color: #fff;
+			width: 100vw;
+			height: 100vh;
+			z-index: 100;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: translateX(-100%);
+			transition: transform 0.3s ease;
+		}
+	</style>
+</head>
+<body class="loading">
+<!-- 	Asingene singene
+		Sashebaleni, ebaleni wenzinsizwa
+		KwaNongoma
+		Enkulu eyohlanga
+		Impi, Enkulu! yeyeni
+		Asingene, Inkani, inkani yezinsizwa
+		singene KwaNongoma
+		Sazesangena ngobhevula
+	 -->
+<div class="loader">
+	<div class="loader--content">
+			<h1>GONGONG <span>&copy;</span></h1>
+			<p>Loading...🙈</p>
+	</div>
+</div>
+
+	<header>
+		<div class="navigation">
+			<div class="logo">
+				<img src="https://gongong.live/word/wp-content/uploads/2021/12/cropped-project_20200802_145127.png" alt="gongong logo" class="img-fluid">
+			</div>
+			<div class="menu-wrapper">	
+				<div class="menu">
+					<a href="index.html" class="menu--item">Home</a>
+					<a href="javascript:void(0)" class="menu--item">Videos</a>
+					<a href="livestream.html" class="menu--item">Live Streams</a>
+					<a href="premier.html" class="menu--item">Premiers</a>
+				</div>
+
+				<div class="subs">
+					<a href="search.html" class="search">Search</a>
+					<a href="javascript:void(0)" class="login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+					<a href="javascript:void(0)" class="login">Sign Up</a>
+				</div>
+				<div class="log--in">
+					<img src="img/dololo.jpg" alt="user_avatar" class="img-fluid user--avatar" width="50" height="50">
+					<p>
+						<span>Moja</span>
+						<span class="username"></span>
+						<span>!</span>
+					</p>
+
+				</div>
+			</div>
+			<a href="#" class="mobile--menu" onclick="toggleMenu()">
+				<div id="nav-icon3">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+	</header>
+
+<body>
+<main>
+	<div class="video--wrapper">
+        <video class="video" id="video" autoPlay muted="muted" playsInline></video>
+    </div>
+    <div class="buttons">
+    	<a href="#" class="btn customBtn" data-stream="start">Start Streaming</a>
+    </div>	
+</main>
+		
+
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-4 col-6">
+				<div class="company">
+					<p><b>Company</b></p>
+					<a href="#">About Us</a>
+					<a href="#">Team</a>
+					<a href="#">Contact Us</a>
+					<a href="#">Payments</a>
+					<a href="#">Tickets</a>
+
+				</div>
+			</div>
+			<div class="col-md-4 col-6">
+				<div class="terms">
+					<p><b>Terms</b></p>
+					<a href="#">terms and conditions</a>
+					<a href="#"> Privacy Policy</a>
+					<a href="#">SITEMAP</a>
+					<a href="#"></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="address">
+					<p><b>Address</b></p>
+					<p>123 Botanic Gardens Road</p>
+					<p>Berea, Durban</p>
+					<p>4001</p>
+				</div>
+
+				<div class="banking">	
+					<p><b>Banking Details</b></p>
+					<p>	Bank: FNB</p>
+					<p>	Account Name: Gong Live Media</p>
+					<p>	Account Number: XXXXX-CCCC-CCCC-XXX</p>
+					<p>	Branch code: 77777</p>
+
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="copyright">
+						<p>&copy; 2022 GONGONG Live Media</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    	<div class="modal fade" tabindex="-1" id="loginModal">
+    		<div class="modal-dialog modal-dialog-centered">
+    			<div class="modal-content">
+    				<div class="login--form">
+    					<h2>Log In</h2>
+    					<form action="" id="login">
+    						<div class="mb-3">
+    							<label for="name" class="form-label">Your Name</label>
+    							<input type="text" class="form-control" id="name" name="name" placeholder="Sbonelo Mngadi" required>
+    						</div>
+    						<div class="mb-3">
+    							<label for="emailAddress" class="form-label">Email address</label>
+    							<input type="email" class="form-control" id="emailAddress" name="email" placeholder="name@example.com">
+    						</div>
+    						<button class="btn customBtn" type="submit">LOGIN</button>
+    						<div class="help">
+    							<p><small>Offline Mode</small></p>
+    							<a href="#" data-bs-dismiss="modal">Close</a>
+    						</div>
+    					</form>
+
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="modal fade" tabindex="-1" id="joinModal">
+    		<div class="modal-dialog modal-dialog-centered">
+    			<div class="modal-content">
+    				<div class="join--up">
+    					<h3>Thank you for joining us</h3>
+    					<p>We will communicate with you via Whatsapp so send us your number or take ours</p>
+    					<p class="whatsapp--number">067-217-6298</p>
+    					<p>or</p>
+    					<form action="#" id="join-form">
+    						<label for="whatsapp-number"></label>
+    						<input type="tel" placeholder="Your number" class="form-control" name="whatsapp-number" id="whatsapp-number" maxlength="10" minlength="10">
+    						<div class="buttons">
+    							<a href="javascript:void(0)" class="close btn customBtn" data-bs-dismiss="modal">Close</a>
+    							<a href="javascript:void(0)" class="btn customBtn" type="submit">Send</a>
+    						</div>
+    					</form>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+
+    	<script src="https://unpkg.com/@cloudinary/js-streaming/dist/js-streaming.js"></script>
+    	<script src="vendor/js/bootstrap.min.js"></script>
+    	<script src="js/global.js"></script>
+    	<script src="js/main.js"></script>
+    	<script src="js/auth.js"></script>
+    	<script type="text/javascript" src="js/stream_consumer.js"></script>
+
+
+</body>
+</html>
